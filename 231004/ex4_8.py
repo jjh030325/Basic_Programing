@@ -19,7 +19,10 @@ def min6(a, b, c, d, e, f):
     else:
         return aa
 
-a, b, c, d, e, f = input('여섯 개의 수를 입력하세요: ').split()
+while(1):
+    a, b, c, d, e, f = input('여섯 개의 수를 입력하세요: ').split()
+    if(a.isdigit() == True and b.isdigit() == True and c.isdigit()==True and d.isdigit() == True and e.isdigit() == True and f.isdigit()==True):
+        break
 
 a = int(a)
 b = int(b)

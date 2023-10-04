@@ -16,10 +16,13 @@ def min3(a, b, c):
     return m
 
 if __name__ == "__main__":
-    a, b, c = input('세 수를 입력하시오 : ').split()
-    a = int(a)
-    b = int(b)
-    c = int(c)
-    print('{}, {}, {}의 평균값은 {}'.format(a, b, c, mean3(a,b,c)))
-    print('{}, {}, {}의 최댓값은 {}'.format(a, b, c, max3(a,b,c)))
-    print('{}, {}, {}의 최솟값은 {}'.format(a, b, c, min3(a,b,c)))
+    while(1):
+        a, b, c = input('세 수를 입력하시오 : ').split()
+        if(a.isdigit() == True and b.isdigit() == True and c.isdigit()==True):
+            a = int(a)
+            b = int(b)
+            c = int(c)
+            print('{}, {}, {}의 평균값은 {}'.format(a, b, c, mean3(a,b,c)))
+            print('{}, {}, {}의 최댓값은 {}'.format(a, b, c, max3(a,b,c)))
+            print('{}, {}, {}의 최솟값은 {}'.format(a, b, c, min3(a,b,c)))
+            break
