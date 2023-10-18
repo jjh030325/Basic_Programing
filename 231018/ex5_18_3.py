@@ -5,6 +5,8 @@ for i in range(len(s_list)):
     if minlen > len(s_list[i]):
         minlen = len(s_list[i])
 
+s_list.sort(key=len)
+
 for i in range(len(s_list)):
     if minlen == len(s_list[i]):
         print(s_list[i])
