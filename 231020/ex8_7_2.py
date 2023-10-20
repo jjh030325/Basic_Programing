@@ -1,5 +1,5 @@
-f1 = open('numberby10.txt','r')
-f2 = open('number1to10.txt', 'r')
+f1 = open('number1to10.txt', 'r')
+f2 = open('numberby10.txt','r')
 f3 = open('merge.txt','w')
 
 for i in range(1, 11):
