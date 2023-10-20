@@ -1,5 +1,5 @@
 f1 = open('random_numbers.txt','r')
-f2 = open('random_even','w')
+f2 = open('random_even.txt','w')
 
 data = list(f1.read().split())
 for i in range(len(data)):
