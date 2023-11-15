@@ -1,0 +1,30 @@
+*Complexity algorithms
+*알고리즘의 복잡도
+
+A category of algorithm's efficlency based on the algorithm's relationship to the input size N.
+입력의 사이즈가 N일 때, 알고리즘의 효율에 따른 분류
+
+Class Big-O Examples
+Big-O 표기법의 예
+
+constant(상수)                 O(1)        Adding an element at the end of an array(배열의 끝에 요소를 추가하는 것)
+logarithmic(로그함수)          O(logn)     Binary Search(이진탐색)
+linear(반복)                   O(n)        Sequential Search(연달아 이어지는 탐색)
+nlogn(반복*로그함수)           O(nlogn)    Merge Sort(합병정렬)
+guadratic(이중반복)            O(n^2)      basic Sort(기본적인 정렬 알고리즘들)
+//이 아래로는 사실상 사용을 지양해야함.
+cubic(삼중반복)                O(n^3)      반복문안에 반복문안에 반복문이 들어간 경우임
+polynomial(6중반복)            O(n^6)      반복문안에 반복문이 5개 들어간 경우
+exponential(지수)              O(C^n)      많이 느림(상수의 n승)
+
+*Function Growth
+*함수의 성장
+
+Let us consider three algorithms f(n), g(n), and h(n), that you can choose for the same result.
+동일 결과를 내는 세 알고리즘 f(n), g(n), h(n)을 고려해봄.
+
+f(n) = n, g(n) = 4n, h(n) = n^2
+
+For a large value of n, the growth rate of h(n) is greater than f(n) and g(n)
+n의 값이 커지는 경우 f(n)과 g(n)보다 h(n^2)의 값이 더 커진다.
+
