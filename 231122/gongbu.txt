@@ -1,0 +1,104 @@
+*Big -O
+
+We want to ffind upper bound on an algorithm's running time
+
+-Don't care constant factors
+
+-consider when n becomes large (n->~~)
+
+
+f(n) is O(g(n)) if there exist positive constants c and n0, s.t, for all n>=no, f(n) <= c*g(n), Saying g(n) dominates f(n).
+
+
+example
+f(n) = 10n+15 -> show that f(n) is O(n).
+10n <= c * n if c=10 for all values of n
+15<= c*n if c = 15 for n>=1
+
+Hence, 
+10n + 15 <= 10n + 15n for n>=1
+10n + 15 <= 25n for n>=1
+
+
+example
+show that 7n^2 + 3n + 9 is O(n^2)
+7n^2 + 3n + 9 <= 7n^2 + 3n^2 + 9n^2     n>=1
+              <= 19n^2, n>=1
+Hence, exist. C = 19, n0 = 1
+                7n^2 + 3n + 9 is O(n^2).
+
+
+example
+10n^2 + 15n is O(n^3).
+10n^2 <= c*n^3          if c = 10, for n >= 1
+15n <= c*n^3            if c = 15, for n >= 1
+10n^2 + 15n <= 10n^3 + 15n^3 for n>=1
+            <= 25n^3 for n>=1
+            exist. c = 25, n0 = 1.
+
+
+*Big -Omega
+f(n) is Omega(g(n)) if there exist positive constants C and n0 s.t. for all n>=n0, f(n) >= c*g(n).
+Big-O is an upper bound : at most this time
+Big-Omega is a lower bound : at least this time is reguired
+
+
+Big - H (Theta)
+f(n) is H(g(n)) if f(n) is O(g(n)) and f(n) is Omega(g(n))
+
+
+example
+3n^2는 Omega(1)의 원소인가?     true 3n^2 > Omega(1)
+3n^2는 Omega(n)의 원소인가?     true 3n^2 > Omega(n)
+3n^2는 Omega(n^2)의 원소인가?   true 3n^2 > Omega(n^2)
+3n^2는 Omega(n^3)의 원소인가?   false 3n^2 < Omega(n^3)
+3n^2는 O(1)의 원소인가?         false
+3n^2는 O(n)의 원소인가?         false
+3n^2는 O(n^2)의 원소인가?       true
+3n^2는 O(n^3)의 원소인가?       true
+3n^2 is H(n^2).
+
+
+
+*Linear Search
+int Linear Search (int[] array, int target)
+{
+    for(int i = 0; i<array.length, i++)
+    {
+        if(array[i] == target)
+            return i;
+    }
+    return -1;
+}
+
+
+
+*Sorting algorithm
+Types                   Big-O
+Selection Sort          O(n^2)
+Insertion Sort          O(n^2)
+Merge Sort              O(nlogn)
+
+
+
+*Selection Sorting
+1. Find the minimum from data[i] to data[length-1] where i starts from zero.
+2. Swap this minimum with data[i]
+3. Repeat steps 1 & 2 until i=length-1
+
+
+*example of Selection Sorting
+Given array A = [30, 10, 2, 15, 8]
+1. i = 0;
+   swap A[2] with A[0]
+   A becomes [2, 10, 30, 15, 8]
+2. i = 1;
+   swap A[4] with A[1]
+   A becomes [2, 8, 30, 15, 10]
+3. i = 2;
+   swap A[4] with A[2]
+   A becomes [2, 8, 10, 15, 30]
+4. i = 3;
+   [2, 8, 10, 15, 30]
+
+
