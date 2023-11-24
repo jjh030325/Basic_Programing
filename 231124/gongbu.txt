@@ -1,0 +1,36 @@
+*Linear Search Algorithm
+->  f(n) = 3n + 1
+    g(n) = n^2
+
+
+*Types of Sorting Algorithm
+
+Types                   Big-O
+Selection Sort          O(n^2)
+Insertion Sort          O(n^2)
+Merge Sort              O(nlogn)
+
+
+*Selection Sort
+1. Find the minimum from data[i] to data[length-1] where i starts from zero.
+2. Swap this minimum with data[i]
+3. Repeat steps 1 and 2 until i=length-1
+
+*example of selection Sort
+A = [30, 10, 2, 15, 8]
+1. i = 0:
+    Swap A[2], A[0]
+    A = [2, 10, 30, 15, 8]
+2. i = 1:
+    Swap A[4], A[1]
+    A = [2, 8, 30, 15, 10]
+3. i = 2:
+    Swap A[3], A[2]
+    A = [2, 8, 10, 15, 30]
+4. i = 3:
+    don't need swap
+
+
+
+
+
