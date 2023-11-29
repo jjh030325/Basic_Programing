@@ -3,7 +3,7 @@ class Dog:
         self.name = name
         self.age = age
     def __str__(self):
-        return "my_dog의 이름은 {}이고, 나이는 {}살입니다.".format(self.name, self.age)
+        return "이름은 {}이고, 나이는 {}살입니다.".format(self.name, self.age)
 
 my_dog = Dog("Mango", 3)
 
